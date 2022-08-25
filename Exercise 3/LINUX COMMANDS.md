@@ -3,11 +3,11 @@
 
 1. >`ip a ` <br>
     Show IP address of default gateway   
-    ![ip a](ip%20a.png)
+    ![ip a](images/ip%20a.png)
 
 2. >`cal` <br>
     Show this month's calendar
-    ![cal](cal.png)
+    ![cal](images/cal.png)
 
 3. >`free ` <br>
    Show memory and swap usage
