@@ -1,43 +1,73 @@
 # 10 linux Commands And Their Functions
 
 
-1. >`ip a ` <br>
-    Show IP address of default gateway   
-    ![ip a](images/ip%20a.png)
+1. `ip a ` <br>
+    Show IP address of default gateway  
+    ```sh
+        ip a
+    ```
+    ![ip a](../images/ip%20a.png)
 
-2. >`cal` <br>
+2. `cal` <br>
     Show this month's calendar
-    ![cal](images/cal.png)
+    ```sh
+        cal
+    ```
+    ![cal](../images/cal.png)
 
-3. >`free ` <br>
+3. `free ` <br>
    Show memory and swap usage
-   ![free](images/free.png)
+   ```sh
+    free
+    ```
+   ![free](../images/free.png)
 
-4. >`w` <br>
+4. `w` <br>
    display who is online
-   ![w](images/w.png)
+   ```sh
+    w
+    ```
+   ![w](../images/w.png)
 
-5. >`more file` <br>
+5. `more file` <br>
     Output the contents of file
-    ![more file](images/more%20file.png)
+    ```sh
+    more file
+    ```
+    ![more file](../images/more%20file.png)
 
-6. >`head file` <br>
+6. `head file` <br>
     Output the first 10 lines of file
-    ![head file](images/head.png)
+    ```sh
+        head [file]
+    ```
+    ![head file](../images/head.png)
 
-7. >`tail file` <br>
+7. `tail file` <br>
     output the last 10 lines of file
-    ![tail](images/tail.png)
+    ```sh
+    tail [file]
+    ```
+    ![tail](../images/tail.png)
 
-8. >`tail -f file` <br>
+8. `tail -f file` <br>
     Output the contents of file as it grows, starting with the last 10 lines
-    ![tail -f file](images/tail%20-f.png)
+    ```sh
+    tail -f [fail]
+    ```
+    ![tail -f file](../images/tail%20-f.png)
 
-9. >`lspci` <br>
+9. `lspci` <br>
     See general informatiion about host bridge, VGA controller, ethernet controller, USB controller, SATA controller, etc.
-    ![lspci](images/lspci.png)
+    ```sh
+        lspci
+    ```
+    ![lspci](../images/lspci.png)
 
-10. >`lsmod` <br>
+10. `lsmod` <br>
     Find what modules are currently loaded 
-    ![lsmod](images/lsmod.png)
+    ```sh
+    lsmod
+    ```
+    ![lsmod](../images/lsmod.png)
    
