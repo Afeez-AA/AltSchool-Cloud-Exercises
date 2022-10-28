@@ -1,0 +1,54 @@
+---
+# install Apache2 using Ansible
+- name: Setup Apache server on myservers
+  hosts: all
+  become: True
+  vars:
+    apache2_version: 2.4.41
+  
+  tasks:
+  # install apache2
+     - name: Install the latest version of apache2
+       command: apt install apache2 -y
+
+  
+  # start the apache2 service
+     - name: Start apache2
+       service:
+         name: apache2
+         enabled: yes
+         state: started
+
+  # Confirm apache2 version
+     - name: confirm the version of apache2 Installed
+       command: apache2 -v
+       register: apache2_version
+
+  # Print the current version of apache2 on screen
+     - name: print apache2 vserion
+       debug:
+         msg: "The current version of apache2 is {{apache2_version}}"
+
+  # Set server to Africa/Lagos timezone
+     - name: Set timezone to Africa/Lagos
+       command: timedatectl set-timezone Africa/Lagos
+
+  # Install php8.1
+     - name: Install software packages
+       command: apt install software-properties-common
+
+     - name: Add repository ppa:ondrej/php
+       apt_repository:
+         repo="ppa:ondrej/php" state=present
+
+     - name: Updating the repo
+       apt: update_cache=yes
+
+  #   - name: installing php7.4
+  #     apt: name=php7.4 state=present
+
+  # copy index.php file apache web hosting path
+     - name: copy file from host vm to remote server
+       copy: 
+         src: /home/vagrant/ansible/index.php
+         dest: /var/www/html/index.php
