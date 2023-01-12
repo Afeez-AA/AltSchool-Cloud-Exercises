@@ -1,4 +1,5 @@
-# SOME CIS BENCHMARK IMPLENTATION ON UBUNTU 
+# Project 06
+## SOME CIS BENCHMARK IMPLENTATION ON UBUNTU 
 1. ***Ensure minimum days between password changes is configured.***
 To prevent user from circumventing the password reuse control, the minimum numbers of days before a change of password is set to 1 or greater. This configuration is carried out in the etc/login.defs file by assigning PASS_MIN_DAYS a greater than 0.
 

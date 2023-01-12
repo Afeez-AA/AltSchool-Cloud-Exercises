@@ -1,8 +1,9 @@
-# CREATE A BASH SCRIPT TO RUN AT EVERY HOUR, SAVING SYSTEM MEMORY (RAM) USAGE TO A SPECIFIED FILE AND AT MIDNIGHT IT SENDS THE CONTENT OF THE FILE TO A SPECIFIED EMAIL ADDRESS, THEN STARTS OVER FOR THE NEW DAY. 
+# PROJECT 7
+ CREATE A BASH SCRIPT TO RUN AT EVERY HOUR, SAVING SYSTEM MEMORY (RAM) USAGE TO A SPECIFIED FILE AND AT MIDNIGHT IT SENDS THE CONTENT OF THE FILE TO A SPECIFIED EMAIL ADDRESS, THEN STARTS OVER FOR THE NEW DAY. 
 
 ### STEP 1
 Create a mailtrap account as our dummy email
-![mailtrap](../Images/mail%20trap%20setup.png)
+![mailtrap](Images/mail%20trap%20setup.png)
 
 ## STEP 2
 Install the `ssmtp` and `mailutils` package with the commands below respestively;
@@ -18,16 +19,16 @@ Configure the ssmtp file
         # sudo nano /etc/ssmtp/ssmtp.conf
 ```
 * Replace the `root` with any email of your choice `mailhub` should be replaced with the host from the mailtrap account and the port number `465`
-  ![mailtrap host](../Images/mailtrap%20host.png)
+  ![mailtrap host](Images/mailtrap%20host.png)
 * Add the User, Password, UseTLS, UseSTARTTLS from the mailtrap account settings to the config file as shown below;
-![mailtrap host](../Images/SSMTP%20CONFIG.png)
+![mailtrap host](Images/SSMTP%20CONFIG.png)
 *NOTE*: Set the hostname if the root mail is that of the host name as shown below;
- ![mailtrap host](../Images/hostname.png)
+ ![mailtrap host](Images/hostname.png)
 * Confirm if the mail setup is correct by sending a mail with an attachment (optional) from the server to the mailtrap account with the command shown below;
 ```sh
     # echo "Hello Afeez, Kindly find attached a list of the top 6 EPL team in England" | mail -s "EPL TEAMS" -A /home/vagrant/epl_teams.txt az@example.com
 ```
-  ![mailtrap host](../Images/email%20confirmation.png)
+  ![mailtrap host](Images/email%20confirmation.png)
 
 ## STEP 4
 * Create a directory and a file containing the script with the following commands below;
@@ -85,4 +86,4 @@ fi
 ```sh
   # 0 0 */1 * * bash /home/vagrant/logs/ram_log.sh
 ```
-![mailtrap](../Images/success%20bash%20script.png)
+![mailtrap](Images/success%20bash%20script.png)
