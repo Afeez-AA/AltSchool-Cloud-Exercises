@@ -1,4 +1,4 @@
-# Project 03
+# Project 04
 Install PHP7.4 on your local machine using the ppa:ondrej/php package repository
 
 Print the content of /etc/apt/source.listand the output of php -v
